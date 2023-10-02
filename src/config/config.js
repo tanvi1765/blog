@@ -4,7 +4,7 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const envVarsSchema = Joi.object({
-    PORT: Joi.number().default(7000),
+    PORT: Joi.number().default(3000),
     MONGODB_URL: Joi.string().trim().description("MONGODB URL")
 }).unknown();
 
