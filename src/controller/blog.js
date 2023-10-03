@@ -1,6 +1,5 @@
 const { blogService } = require("../services");
-
-// create
+/* create blog */
 const createrBlog = async () => {
     try {
         const reqBody = req.body;
@@ -16,7 +15,7 @@ const createrBlog = async () => {
     };
 };
 
-// list
+/*  create list*/
 const blogList = async () => {
     try {
         const getList = await blogService.blogList();
@@ -30,7 +29,7 @@ const blogList = async () => {
     };
 };
 
-// update
+/* update recode */
 const updateRecode = async () => {
     try {
         const blogId = req.params.blogId;
@@ -48,8 +47,7 @@ const updateRecode = async () => {
         res.status(400).json({ success: false, message: error.message });
     }
 };
-
-// delete
+/*  delete recode*/
 const deleteRecode = async () => {
     try {
         const blogId = res.params.req.body;
